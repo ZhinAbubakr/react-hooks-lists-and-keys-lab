@@ -7,6 +7,11 @@ function ProjectItem({ name, about, technologies }) {
       <p>{about}</p>
       <div className="technologies">
         {/* render a <span> for each technology in the technologies array */}
+        {technologies.map((item, index) => (
+          <span key={index}>
+            {item.charAt(0).toUpperCase() + item.slice(1)}
+          </span>
+        ))}
       </div>
     </div>
   );
